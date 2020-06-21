@@ -1,0 +1,45 @@
+<style>
+    h1 {font-size: 350%;}
+    .ban_select {
+        user-select: none;
+    }
+    .fullwidth {width: 100%; left:0;}
+    .one-forth-width {width:25%; animation: hr_enter_in_left 1.5s}
+    .mid_y {position: absolute; top:38%;}
+    .mid_text {text-align: center;}
+    .site_info {
+        font-family: Georgia, '宋体', 'Times New Roman', Times, serif;
+        font-weight: lighter;
+        line-height: 30%;
+    }
+    @keyframes hr_enter_in_left
+    {
+        0% {width:0%}
+        100% {width:25%}
+    }
+</style>
+<html>
+    <head>
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="site_info" class="fullwidth mid_y">
+            <h1 id="site_title" class="ban_select mid_text site_info animate__animated animate__fadeInDown" v-text="site_title"></h1>
+            <hr class="one-forth-width">
+            <h4 id="site_vice_title" class="ban_select mid_text site_info animate__animated animate__fadeInUp" v-text="site_vice_title"></h4>
+        </div>
+        <script>
+            var site_info=new Vue({
+                el:"#site_info",
+                data:{
+                    site_title:"愚馆",
+                    site_vice_title:"Sicentia ipsa potentia ist."
+                }
+            })
+        </script>
+    </body>
+</html>

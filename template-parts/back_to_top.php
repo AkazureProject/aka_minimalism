@@ -12,5 +12,8 @@
             }
         }, 10);
     }
-    window.onscroll=function(){back_to_top_arrow.style.opacity=document.body.scrollTop/200;}
+    window.onscroll=function(){
+		back_to_top_arrow.style.opacity=document.body.scrollTop/200;
+		foot.style.opacity=document.body.scrollTop/200
+	}
 </script>

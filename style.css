@@ -107,8 +107,8 @@ a:active {color:navy; text-decoration: underline;}
     /* 尾部 */
 	.footer {
 		width:100%;
-	position:fixed;
-	bottom:0;
+		position:fixed;
+		bottom:0px;
 	}
     .footer span{
         text-align: center;

@@ -18,8 +18,8 @@
                 <div id="toolsidebar" class="rightsidebar hidden-xs" >
                     <?php dynamic_sidebar("rightsidebar"); ?>
                 </div>
-                <?php get_footer(); ?>
                 <div class="clear_div"></div>
+				<?php get_footer(); ?>
             </div>
         </div>
         <?php get_template_part('template-parts/back_to_top');?>
@@ -36,7 +36,7 @@
                 methods:{
                     go_to_content: function(){
                         this.is_gone_to_content=true;
-                        window.location.href="\#index_content";
+                        window.location.href="/#index_content";
                     },
                 },
                 computed:{  

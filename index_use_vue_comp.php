@@ -12,8 +12,21 @@
             </div>
             <div v-show="is_gone_to_content">
                 <div id="index_content"
-                    v-if='<?php echo have_posts(); ?>'>
-                    <?php get_template_part('template-parts/index_post_info'); ?>
+                    v-if='<?php have_posts(); ?>'>
+                    <?php while (have_posts()): ?>
+                        <?php the_post(); ?>
+                        <article :key="<?php echo the_id();?>">
+                            <index_post_info
+                            :post_title="'<?php echo the_title();?>'"
+                            :post_url="'<?php echo the_permalink();?>'"
+                            :post_date="'<?php echo get_the_date("写于Y年m月d日");?>'"
+                            :edit_post_link='`<?php echo edit_post_link(); ?>`'
+                            :post_content='`<?php echo the_content();?>`'
+                            :post_thumbnail='`<?php echo get_the_post_thumbnail(null,'thumbnail');?>`'
+                            >
+                            <index_post_info>
+                        </article>
+                    <?php endwhile; ?>
                 </div>
                 <div id="toolsidebar" class="rightsidebar hidden-xs" >
                     <?php dynamic_sidebar("rightsidebar"); ?>
@@ -26,6 +39,22 @@
     </body>
     <script>
             var win_width=0;
+            const index_post_info={
+                template:
+                `<div class="index_post_small_root">
+                    <div class="index_post_thumbnail hidden-xs" v-if="post_thumbnail"  v-html="post_thumbnail"></div>
+                    <div class="index_post_small_text">
+                        <p>
+                            <a class="index_post_small_title" target="_blank" :href="post_url">{{post_title}}</a>
+                            <sub v-html="edit_post_link"></sub>
+                        </p>
+                        <h5 v-text="post_date"></h5> 
+                        <div class="index_post_small_content" v-html="post_content"></div>
+                    </div>
+                    <div class="clear_div"></div>
+                 </div>`,
+                 props: ['post_title','post_url','post_date','edit_post_link', 'post_content','post_thumbnail']
+            }
             var site_info=new Vue({
                 el:".root",
                 data:{
@@ -42,6 +71,7 @@
                 computed:{  
                 },
                 components:{
+                    'index_post_info':index_post_info,
                 },
                 // mounted(){
                 //     window.addEventListener("resize",()=>{

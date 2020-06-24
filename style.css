@@ -1,3 +1,12 @@
+/*
+Theme Name: Akazure Minimalism
+Author: Akazure
+Author URI: https://akazure.com
+Description:This is Akazure Minimalism Theme
+Requires at least: WordPress 4.9.6
+Version: 1.2
+
+*/
 @charset "UTF-8";
 /* body {
     border:10px solid;
@@ -30,9 +39,10 @@ a:active {color:navy; text-decoration: underline;}
     #index_content {
         float:left;
         left:0;
-        width:61.8%;
+        width:65%;
         height:100%;
         padding:3%;
+        padding-left:50px;
         padding-right:0;
         animation: fadeIn;
         animation-duration: 2s;
@@ -85,7 +95,7 @@ a:active {color:navy; text-decoration: underline;}
         float:left;
         padding-left:5px;
         width:60%;
-        height:130px;
+        line-height: 25px;
     }
     .index_post_small_root .index_post_small_text p {
         color:gray;
@@ -95,27 +105,28 @@ a:active {color:navy; text-decoration: underline;}
         opacity: 39%;
     }
     /* 尾部 */
-    footer{
-        padding:20%;
-    }
-    footer span{
+	.footer {
+		width:100%;
+	position:fixed;
+	bottom:0;
+	}
+    .footer span{
         text-align: center;
     }
-    footer hr {
+    .footer hr {
         width:80%;
         color:black;
         left:0;
         size:2px;
     }
-    footer p {
+    .footer p {
         color:grey;
     }
 /* 文章页面 */
-.blog_page_root {
+	.blog_page_root {
     width:80%;
     padding:10%;
     font-family: 'Times New Roman', Times, serif;
-    line-height: 110%;
     animation:fadeIn;
     animation-duration: 1s;
 }
@@ -124,6 +135,10 @@ a:active {color:navy; text-decoration: underline;}
 }
 .blog_page_root .blog_content {
     width:100%;
+	font-family:'华文中宋','Times New Roman', Times, serif;
+	line-height: 120%;
+	font-size:medium;
+	
 }
 /* 404页面 */
 .warning_404 {
@@ -160,11 +175,11 @@ a:active {color:navy; text-decoration: underline;}
     font-weight: bold;
 }
 .left_navi_root #left_show_navi{
-    width:100%;
     position: fixed;
     left:0;
     top:4%;
     z-index:2;
+    overflow: hidden;
 }
 .left_navi_root #left_hide_navi{
     float:right;
@@ -207,6 +222,4 @@ a:active {color:navy; text-decoration: underline;}
 }
 .back_to_top_root #back_to_top_arrow{
     opacity: 0%;
-    border:2px solid;
-    text-align: center;
 }

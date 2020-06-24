@@ -1,10 +1,22 @@
 <?php get_header(); ?>
+<style>
+    footer{
+        position:absolute;
+        bottom:0%;
+        animation:fadeIn;
+        animation-duration:1s;
+    }
+</style>
 <body>
     <article class="blog_page_root">
-        <h2 class="blog_title" v-text="blog_title"></h2>
-        <hr>
+        <h1 class="blog_title" v-text="blog_title"></h1>
+        <h4 class="blog_category ban_select" v-html="blog_category"></h4>
+        <sub v-if="blog_edit_link" v-html="blog_edit_link"></sub>
+        <hr align="left">
+        <h4 class="blog_date" v-text="blog_author+blog_date"></h4>
         <div class="blog_content" v-html="blog_content"></div>
     </article>
+    <?php get_template_part('template-parts/back_to_top');?>
     <script>
         if (<?php echo have_posts(); ?>){
             <?php the_post();?>
@@ -12,10 +24,14 @@
                 el:".blog_page_root",
                 data:{
                     blog_title:'<?php the_title(); ?>',
-                    blog_date:'<?php the_date(); ?>',
-                    blog_content:`<?php the_content(); ?>`
+                    blog_date:'<?php the_date(" 写于Y年m月d日"); ?>',
+                    blog_author:'@<?php echo get_the_author(); ?>',
+                    blog_category:`<?php echo the_category("|","none");?>`,
+                    blog_edit_link: `<?php echo edit_post_link(); ?>`,
+                    blog_content:`<?php the_content(); ?>`,
                 }
             })
         }
     </script>
 </body>
+<?php get_footer(); ?>

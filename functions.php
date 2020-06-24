@@ -16,5 +16,6 @@
         "name"=>"leftSideBar",
         "id"=>"leftsidebar",
         "class"=>"hidden_sidebar",
+        'before_widget'=>'<hr align="left" style="width:80%;">',
     ));
 ?>

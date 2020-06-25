@@ -232,3 +232,47 @@ a:active {color:navy; text-decoration: underline;}
 .blog_navi .nav-next{
     display: inline-flex;
 }
+/* 归档页面 */
+    /* 模拟纸质档案 */
+    .posts_as_files{
+        float:left;
+        left:0;
+        width:65%;
+        padding:3%;
+        padding-left:50px;
+        padding-right:0;
+        padding-bottom: 5%;
+        animation: fadeIn;
+        animation-duration: 2s;
+    }
+    .post_as_file{
+        position:absolute;
+        width:60%;
+        margin-top:3%;
+        height:70%;
+        background-color: white;
+        border:2px solid;
+        font-family: '华文中宋', 'Times New Roman', Times, serif;
+        overflow: hidden;
+    }
+    .post_as_file hr{
+        width:80%;
+    }
+    .post_as_file_tag{
+        font-weight: bolder;
+        margin:1%;
+        width:60%;
+        /* border:2px red double; */
+    }
+    .post_as_file_content{
+        padding:4%;
+        padding-top: 0;
+    }
+#archive_root{
+    width:100%;
+}
+#archive_foot{
+    width: 100%;
+    position: absolute;
+    bottom:0;
+}

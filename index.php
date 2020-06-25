@@ -8,7 +8,7 @@
                     <hr class="one-forth-width">
                     <h4 id="site_vice_title" class="ban_select mid_text site_info animate__animated animate__fadeInUp" v-html="site_vice_title"></h4>
                 </div>
-                <button id="skipToContent" @click="go_to_content" v-show="!is_gone_to_content">更多</button>
+                <button id="skipToContent" @click="go_to_content" v-show="!is_gone_to_content">摩多摩多</button>
             </div>
             <div v-show="is_gone_to_content">
                 <div id="index_content"
@@ -36,7 +36,7 @@
                 methods:{
                     go_to_content: function(){
                         this.is_gone_to_content=true;
-                        window.location.href="/#index_content";
+                        window.location.href="\#index_content";
                     },
                 },
                 computed:{  

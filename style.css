@@ -40,10 +40,10 @@ a:active {color:navy; text-decoration: underline;}
         float:left;
         left:0;
         width:65%;
-        height:100%;
         padding:3%;
         padding-left:50px;
         padding-right:0;
+        padding-bottom: 5%;
         animation: fadeIn;
         animation-duration: 2s;
         /* border:1px solid; */
@@ -62,7 +62,7 @@ a:active {color:navy; text-decoration: underline;}
         bottom: 2%;
         left:25%;
         width:50%;
-        height:20px;
+        height:5%;
         background-color: #003155;
         color:white;
         border: 0;
@@ -107,8 +107,6 @@ a:active {color:navy; text-decoration: underline;}
     /* 尾部 */
 	.footer {
 		width:100%;
-		position:fixed;
-		bottom:0px;
 	}
     .footer span{
         text-align: center;
@@ -222,4 +220,15 @@ a:active {color:navy; text-decoration: underline;}
 }
 .back_to_top_root #back_to_top_arrow{
     opacity: 0%;
+}
+/* 文章导航 */
+.blog_navi{
+    width:100%;
+    text-align: center;
+}
+.blog_navi .nav-previous{
+    display: inline-flex;
+}
+.blog_navi .nav-next{
+    display: inline-flex;
 }

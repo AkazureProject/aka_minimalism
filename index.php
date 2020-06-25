@@ -15,9 +15,7 @@
                     v-if='<?php echo have_posts(); ?>'>
                     <?php get_template_part('template-parts/index_post_info'); ?>
                 </div>
-                <div id="toolsidebar" class="rightsidebar hidden-xs" >
-                    <?php dynamic_sidebar("rightsidebar"); ?>
-                </div>
+                <?php get_template_part('template-parts/right_side_bar'); ?>
                 <div class="clear_div"></div>
 				<?php get_footer(); ?>
             </div>

@@ -156,8 +156,8 @@ a:active {color:navy; text-decoration: underline;}
     width:27%;
     margin-top:3%;
     margin-right:3%;
-    animation: fadeIn, slideInRight;
-    animation-duration: 1s;
+    animation: fadeIn;
+    animation-duration: 2s;
 }
 .rightsidebar .widget_ul{
     list-style-type: none;

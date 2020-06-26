@@ -238,15 +238,14 @@ a:active {color:navy; text-decoration: underline;}
         float:left;
         left:0;
         width:65%;
+        height:70%;
         padding:3%;
         padding-left:50px;
         padding-right:0;
         padding-bottom: 5%;
-        animation: fadeIn;
-        animation-duration: 2s;
     }
     .post_as_file{
-        position:absolute;
+        position: absolute;
         width:60%;
         margin-top:3%;
         height:70%;
@@ -254,6 +253,7 @@ a:active {color:navy; text-decoration: underline;}
         border:2px solid;
         font-family: '华文中宋', 'Times New Roman', Times, serif;
         overflow: hidden;
+        animation: fadeInLeft;
     }
     .post_as_file hr{
         width:80%;
@@ -274,4 +274,9 @@ a:active {color:navy; text-decoration: underline;}
 #archive_foot{
     width: 100%;
     float: left;
+}
+#archive_navi{
+    width: 70%;
+    margin-top:2%;
+    margin-bottom:2%;
 }

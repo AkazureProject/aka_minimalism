@@ -1,6 +1,6 @@
 <?php if(have_posts()):
         $p_counter=0; ?>
-    <div class="posts_as_files">
+    <div id="posts_as_files" class="posts_as_files">
         <?php while(have_posts()):
                 the_post();?>
             <div id=<?php echo 'post_file_num_',the_ID(); ?> class="post_as_file">
@@ -17,13 +17,14 @@
             </div>
             <script>
                 post_file_num_<?php echo get_the_ID(); ?>.style.top=<?php echo $p_counter?>*30;
+                post_file_num_<?php echo get_the_ID(); ?>.style.animationDuration=<?php echo $p_counter?>*0.1+0.5+"s";
                 post_file_tag_num_<?php echo get_the_ID(); ?>.onmouseover=()=>{post_file_num_<?php echo get_the_ID(); ?>.style.zIndex=2;};
                 post_file_tag_num_<?php echo get_the_ID(); ?>.onmouseout=()=>{post_file_num_<?php echo get_the_ID(); ?>.style.zIndex=0;};
             </script>
             <?php $p_counter++;?>
         <?php endwhile;?>
+        <script>
+            posts_as_files.style.height=window.innerHeight*0.7+<?php echo $p_counter?>*30;
+        </script>
     </div>
-    <script>
-        
-    </script>
 <?php endif;?>

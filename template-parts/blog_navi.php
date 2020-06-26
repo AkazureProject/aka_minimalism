@@ -1,4 +1,4 @@
-<div class="blog_navi ban_select">
+<div id="blog_navi" class="blog_navi ban_select">
         <?php
         function new_get_previous_posts_link( $label = null ) {
             global $paged;
